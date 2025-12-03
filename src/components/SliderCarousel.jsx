@@ -15,55 +15,18 @@ const SliderCarousel = () => {
    { src: necklace, name: "Necklace" },
    { src: pendant, name: "Pendant" },
    { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
    { src: earring, name: "Earring" },
    { src: bracelets, name: "Bracelet" },
    { src: bangles, name: "Bangle" },
    { src: necklace, name: "Necklace" },
    { src: pendant, name: "Pendant" },
    { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
    { src: earring, name: "Earring" },
    { src: bracelets, name: "Bracelet" },
    { src: bangles, name: "Bangle" },
    { src: necklace, name: "Necklace" },
    { src: pendant, name: "Pendant" },
-   { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
-   { src: earring, name: "Earring" },
-   { src: bracelets, name: "Bracelet" },
-   { src: bangles, name: "Bangle" },
-   { src: necklace, name: "Necklace" },
-   { src: pendant, name: "Pendant" },
-   { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
-   { src: earring, name: "Earring" },
-   { src: bracelets, name: "Bracelet" },
-   { src: bangles, name: "Bangle" },
-   { src: necklace, name: "Necklace" },
-   { src: pendant, name: "Pendant" },
-   { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
-   { src: earring, name: "Earring" },
-   { src: bracelets, name: "Bracelet" },
-   { src: bangles, name: "Bangle" },
-   { src: necklace, name: "Necklace" },
-   { src: pendant, name: "Pendant" },
-   { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
-   { src: earring, name: "Earring" },
-   { src: bracelets, name: "Bracelet" },
-   { src: bangles, name: "Bangle" },
-   { src: necklace, name: "Necklace" },
-   { src: pendant, name: "Pendant" },
-   { src: ring, name: "Ring" },
-   { src: ring, name: "Ring" },
-   { src: earring, name: "Earring" },
-   { src: bracelets, name: "Bracelet" },
-   { src: bangles, name: "Bangle" },
-   { src: necklace, name: "Necklace" },
-   { src: pendant, name: "Pendant" },
-   { src: ring, name: "Ring" },
+
  ];
 
  const [current, setCurrent] = useState(0);
@@ -102,17 +65,17 @@ const SliderCarousel = () => {
 
      {/* Buttons */}
      <button
-       className="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-1 rounded-full"
+       className="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-3 rounded-full"
        onClick={prevSlide}
      >
-       ←
+       ⮘
      </button>
 
      <button
-       className="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-1 rounded-full"
+       className="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-3 rounded-full"
        onClick={nextSlide}
      >
-       →
+       ⮚
      </button>
    </div>
  );
