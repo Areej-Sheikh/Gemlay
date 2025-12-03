@@ -5,6 +5,7 @@ import CustomerReviews from "./pages/CustomerReviews";
 import Home from "./pages/Home";
 import ShopByGender from "./pages/ShopByGender";
 import TrendingProducts from "./pages/TrendingProducts";
+import Updates from "./pages/Updates";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Category />
       <ShopByGender />
       <CustomerReviews/>
+      <Updates/>
     </div>
   );
 }
