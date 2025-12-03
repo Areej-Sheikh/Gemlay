@@ -36,7 +36,7 @@ const TrendingProducts = () => {
         {products.map((product, index) => (
           <div
             key={index}
-            className="border pl-2 pt-3 w-[20%] flex flex-col items-center justify-center rounded-2xl"
+            className="bg-[#FFFFFF] pl-2 pt-3 w-[20%] flex flex-col items-center justify-center rounded-2xl"
           >
             <div className="flex items-center justify-between w-full">
               <div
@@ -105,7 +105,7 @@ const TrendingProducts = () => {
         ))}
       </div>
 
-      <div className="mt-15 text-[#007A64] flex justify-center text-lg">
+      <div className="mt-14 text-[#007A64] flex justify-center text-lg">
         DISCOVER ALL <i className="ri-arrow-right-s-fill"></i>
       </div>
     </div>

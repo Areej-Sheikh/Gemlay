@@ -18,7 +18,7 @@ const Bestseller = () => {
   };
 
   return (
-    <div className="m-10">
+    <div className="m-10 ">
       <div className="flex flex-col items-center justify-center text-xl m-10">
         <div className="flex items-center gap-3">
           <div className="h-0.5 w-20 bg-[#007A64]" />
@@ -35,7 +35,7 @@ const Bestseller = () => {
         {products.map((product, index) => (
           <div
             key={index}
-            className="border pl-2 pt-3 w-[20%] flex flex-col items-center justify-center rounded-2xl"
+            className="bg-[#FFFFFF]  pl-2 pt-3 w-[20%] flex flex-col items-center justify-center rounded-2xl"
           >
             <div className="flex items-center justify-between w-full">
               <div
@@ -52,7 +52,7 @@ const Bestseller = () => {
                 onClick={() => toggleLike(index)}
               >
                 {liked[index] ? (
-                  <i className="ri-heart-3-fill text-red-500"></i> 
+                  <i className="ri-heart-3-fill text-red-500"></i>
                 ) : (
                   <i className="ri-heart-add-2-line"></i>
                 )}
@@ -104,7 +104,7 @@ const Bestseller = () => {
         ))}
       </div>
 
-      <div className="mt-15 text-[#007A64] flex justify-center text-lg">
+      <div className="mt-14 text-[#007A64] flex justify-center text-lg">
         DISCOVER ALL <i className="ri-arrow-right-s-fill"></i>
       </div>
     </div>

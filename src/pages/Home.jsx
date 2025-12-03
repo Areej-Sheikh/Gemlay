@@ -5,7 +5,7 @@ import truck from "../assets/deliveryTruck.png";
 import gift from "../assets/discount.png";
 const Home = () => {
   return (
-    <div className="bg-[#FBFBFB]">
+    <div className="bg-[#F8F8F8]">
       <Nav />
       <div className="h-7 p-5 w-full flex items-center justify-evenly bg-[#F5F5F5]">
         <p>NEW ARRIVAL</p>

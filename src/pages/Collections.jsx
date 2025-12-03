@@ -6,7 +6,7 @@ import coll5 from "../assets/collection5.png"
 import coll6 from "../assets/collection6.png"
 const Collections = () => {
   return (
-    <div className="flex flex-col items-center justify-center mb-10 bg-[#FBFBFB] px-10">
+    <div className="flex flex-col items-center justify-center mb-10 bg-[#F8F8F8] px-10">
       <div className="flex flex-col items-center justify-center text-xl">
         <div className="flex items-center gap-3">
           <div className="h-0.5 w-20 bg-[#007A64]" />
@@ -27,7 +27,7 @@ const Collections = () => {
         <img src={coll5} alt="collection 5" />
         <img src={coll6} alt="collection 6" />
       </div>
-      <div className="mt-15 text-[#007A64]">
+      <div className="mt-14 text-[#007A64]">
         DISCOVER ALL<i class="ri-arrow-right-s-fill"></i>
       </div>
     </div>

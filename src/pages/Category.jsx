@@ -8,7 +8,7 @@ import category6 from "../assets/category6.png"
 
 const Category = () => {
   return (
-    <div className="m-10">
+    <div className="m-10 bg-[#F8F8F8]">
       <div className="flex flex-col items-center justify-center text-xl m-10">
         <div className="flex items-center gap-3">
           <div className="h-0.5 w-20 bg-[#007A64]" />
@@ -31,7 +31,7 @@ const Category = () => {
             <img src={category6} alt="" className="w-[30%] transition-transform duration-300 ease-out hover:scale-105" />
         </div>
       </div>
-      <div className="mt-15 text-[#007A64] flex justify-center text-lg">
+      <div className="mt-14 text-[#007A64] flex justify-center text-lg">
         DISCOVER ALL <i className="ri-arrow-right-s-fill"></i>
       </div>
     </div>
