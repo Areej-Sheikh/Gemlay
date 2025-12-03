@@ -1,3 +1,4 @@
+import Copyright from "./components/copyright";
 import Bestseller from "./pages/Bestseller";
 import Category from "./pages/Category";
 import Collections from "./pages/Collections";
@@ -24,6 +25,7 @@ const App = () => {
       <NewsletterSignup />
       <FAQ />
       <Footer />
+      <Copyright/>
     </div>
   );
 };
