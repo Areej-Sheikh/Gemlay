@@ -21,17 +21,17 @@ const Category = () => {
       </div>
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex gap-6">
-            <img src={category1} alt=""  className="w-[50%]"/>
-            <img src={category2} alt=""  className="w-[50%]"/>
+            <img src={category1} alt=""  className="w-[50%] transition-transform duration-300 ease-out hover:scale-105"/>
+            <img src={category2} alt=""  className="w-[50%] transition-transform duration-300 ease-out hover:scale-105"/>
         </div>
         <div className="flex  mt-10 ml-4 items-center justify-center gap-5">
-            <img src={category3} alt="" className="w-[30%]"  />
-            <img src={category4} alt="" className="w-[30%]" />
-            <img src={category5} alt="" className="w-[30%]" />
-            <img src={category6} alt="" className="w-[30%]" />
+            <img src={category3} alt="" className="w-[30%] transition-transform duration-300 ease-out hover:scale-105"  />
+            <img src={category4} alt="" className="w-[30%] transition-transform duration-300 ease-out hover:scale-105" />
+            <img src={category5} alt="" className="w-[30%] transition-transform duration-300 ease-out hover:scale-105" />
+            <img src={category6} alt="" className="w-[30%] transition-transform duration-300 ease-out hover:scale-105" />
         </div>
       </div>
-      <div className="mt-5 text-[#007A64] flex justify-center text-lg">
+      <div className="mt-15 text-[#007A64] flex justify-center text-lg">
         DISCOVER ALL <i className="ri-arrow-right-s-fill"></i>
       </div>
     </div>

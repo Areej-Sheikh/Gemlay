@@ -27,7 +27,7 @@ const Collections = () => {
         <img src={coll5} alt="collection 5" />
         <img src={coll6} alt="collection 6" />
       </div>
-      <div className="mt-5 text-[#007A64]">
+      <div className="mt-15 text-[#007A64]">
         DISCOVER ALL<i class="ri-arrow-right-s-fill"></i>
       </div>
     </div>

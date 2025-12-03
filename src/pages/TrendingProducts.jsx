@@ -105,7 +105,7 @@ const TrendingProducts = () => {
         ))}
       </div>
 
-      <div className="mt-5 text-[#007A64] flex justify-center text-lg">
+      <div className="mt-15 text-[#007A64] flex justify-center text-lg">
         DISCOVER ALL <i className="ri-arrow-right-s-fill"></i>
       </div>
     </div>
