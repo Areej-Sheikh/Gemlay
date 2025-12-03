@@ -2,6 +2,8 @@ import Bestseller from "./pages/Bestseller";
 import Category from "./pages/Category";
 import Collections from "./pages/Collections";
 import CustomerReviews from "./pages/CustomerReviews";
+import FAQ from "./pages/FAQ";
+import Footer from "./pages/Footer";
 import Home from "./pages/Home";
 import NewsletterSignup from "./pages/NewsletterSignup";
 import ShopByGender from "./pages/ShopByGender";
@@ -17,11 +19,13 @@ const App = () => {
       <Bestseller />
       <Category />
       <ShopByGender />
-      <CustomerReviews/>
-      <Updates/>
-      <NewsletterSignup/>
+      <CustomerReviews />
+      <Updates />
+      <NewsletterSignup />
+      <FAQ />
+      <Footer />
     </div>
   );
-}
+};
 
-export default App
+export default App;
