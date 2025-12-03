@@ -53,9 +53,9 @@ const TrendingProducts = () => {
                 onClick={() => toggleLike(index)}
               >
                 {liked[index] ? (
-                  <i className="ri-heart-3-fill text-red-500"></i> // red filled heart
+                  <i className="ri-heart-3-fill text-red-500"></i> 
                 ) : (
-                  <i className="ri-heart-add-2-line"></i> // outline heart
+                  <i className="ri-heart-add-2-line"></i> 
                 )}
               </div>
             </div>
