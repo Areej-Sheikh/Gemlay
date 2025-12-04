@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 import ring from "../assets/sliderRing.png";
 import earring from "../assets/sliderEarring.png";
 import bangles from "../assets/sliderBangles.png";
@@ -17,58 +16,69 @@ const SliderCarousel = () => {
     { src: pendant, name: "Pendant" },
   ];
 
-  const loopedItems = [...items, ...items, ...items];
   const [current, setCurrent] = useState(0);
+  const containerRef = useRef(null);
+  const [itemWidth, setItemWidth] = useState(0);
 
-  const nextSlide = () => {
-    let newIndex = current + 1;
-    if (newIndex >= items.length * 2) newIndex = items.length;
-    setCurrent(newIndex);
-  };
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        const child = containerRef.current.querySelector(".carousel-item");
+        if (child) setItemWidth(child.offsetWidth + 24);
+      }
+    };
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
-  const prevSlide = () => {
-    let newIndex = current - 1;
-    if (newIndex < 0) newIndex = items.length - 1;
-    setCurrent(newIndex);
-  };
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % items.length);
+  const prevSlide = () =>
+    setCurrent((prev) => (prev - 1 + items.length) % items.length);
 
   return (
-    <div className="w-full flex items-center justify-center gap-4 mt-10 mb-10">
-      <button
-        onClick={prevSlide}
-        className="bg-white shadow py-3 px-4 rounded-full hover:scale-110"
-      >
-        <i className="ri-arrow-left-s-fill"></i>
-      </button>
-
-      <div className="overflow-hidden w-[69%]">
-        <div
-          className="flex items-center transition-transform duration-500"
-          style={{
-            width: `${loopedItems.length * 140}px`,
-            transform: `translateX(-${current * 140}px)`,
-          }}
+    <div className="w-full flex flex-col items-center justify-center mt-10 mb-10 gap-4">
+      <div className="flex items-center w-full justify-center gap-4">
+        <button
+          onClick={prevSlide}
+          className="bg-white shadow py-3 px-4 rounded-full hover:scale-110 transition-transform"
         >
-          {loopedItems.map((item, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center justify-center shrink-0 mx-3 w-[120px]"
-            >
-              <div className="border-4 border-[#017B65] rounded-full w-32 h-32 flex items-center justify-center">
-                <img className="h-24" src={item.src} alt={item.name} />
-              </div>
-              <p className="text-md font-medium mt-2">{item.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+          <i className="ri-arrow-left-s-fill text-2xl"></i>
+        </button>
 
-      <button
-        onClick={nextSlide}
-        className="bg-white shadow py-3 px-4 rounded-full hover:scale-110"
-      >
-        <i className="ri-arrow-right-s-fill"></i>
-      </button>
+        <div className="overflow-hidden w-[90%] sm:w-[70%]">
+          <div
+            ref={containerRef}
+            className="flex items-center transition-transform duration-500"
+            style={{ transform: `translateX(-${current * itemWidth}px)` }}
+          >
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="carousel-item flex flex-col items-center justify-center shrink-0 mx-3 w-24 sm:w-32"
+              >
+                <div className="border-4 border-[#017B65] rounded-full w-24 sm:w-32 h-24 sm:h-32 flex items-center justify-center">
+                  <img
+                    className="h-16 sm:h-24"
+                    src={item.src}
+                    alt={item.name}
+                  />
+                </div>
+                <p className="text-sm sm:text-md font-medium mt-2 text-center">
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="bg-white shadow py-3 px-4 rounded-full hover:scale-110 transition-transform"
+        >
+          <i className="ri-arrow-right-s-fill text-2xl"></i>
+        </button>
+      </div>
     </div>
   );
 };
